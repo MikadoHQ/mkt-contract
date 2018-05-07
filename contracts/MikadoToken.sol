@@ -49,7 +49,7 @@ contract MikadoToken is StandardToken, BurnableToken, Ownable {
 		return true;
 	}
 
-	function release() onlyOwner public returns (bool) {
+	function release() public onlyOwner returns (bool) {
 		require(!released);
 		released = true;
 		emit Release();
